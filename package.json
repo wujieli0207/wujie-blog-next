@@ -1,6 +1,6 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
-  "version": "2.2.0",
+  "name": "wujie-blog-next",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "next dev",
@@ -68,5 +68,7 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.6.1"
+  "volta": {
+    "node": "20.11.0"
+  }
 }
