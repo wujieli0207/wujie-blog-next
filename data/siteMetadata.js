@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: '旅行者计划',
-  author: 'Jacky Li',
+  author: 'wujieli',
   headerTitle: '旅行者计划',
   description: '人们会被自己热爱的事物改变，而没有人因为给予而贫穷',
   language: 'zh-CN',
