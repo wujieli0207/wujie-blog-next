@@ -5,8 +5,6 @@ tags: ['前端/vite']
 draft: false
 ---
 
-vite-principle4-dev-plugin
-
 我们都知道，vite 在开发时使用的是 esbuild 作为依赖预构建和 ts、jsx 文件转译工具，通过浏览器的 ESM 加载，而在生产打包时使用的是 Rollup 作为打包工具。这样的双引擎架构可以同时享受到到开发时 esbuild 的极速体验，也可以在生产打包时使用 Rollup 实现代码分割、自动预加载、异步 chunk 加载优化等，但这同时也带来一个问题：在开发环境，如何兼容 Rollup 的插件？
 
 在 vite 中的解决方案是
