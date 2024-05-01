@@ -105,6 +105,7 @@ export const Blog = defineDocumentType(() => ({
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
+    banner_img: { type: 'string' }, // TODO 待优化
   },
   computedFields: {
     ...computedFields,
