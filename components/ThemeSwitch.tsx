@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { Menu, RadioGroup, Transition } from '@headlessui/react'
+import { usePreferDarkMode } from 'hooks/usePreferDarkMode'
 
 const Sun = () => (
   <svg
@@ -46,11 +47,27 @@ const Monitor = () => (
 )
 
 const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
+  const isPreferDarkMode = usePreferDarkMode()
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    theme && setSemiTheme(theme, isPreferDarkMode)
+  }, [theme, isPreferDarkMode])
+
+  const handleSetTheme = (value: string) => {
+    setSemiTheme(value, isPreferDarkMode)
+    setTheme(value)
+  }
+
+  const setSemiTheme = (value: string, isPreferDarkMode: boolean) => {
+    const body = document.body
+    if (value === 'dark' || (value === 'system' && isPreferDarkMode)) {
+      body.setAttribute('theme-mode', 'dark')
+    } else {
+      body.removeAttribute('theme-mode')
+    }
+  }
 
   return (
     <div className="mr-5">
@@ -68,7 +85,7 @@ const ThemeSwitch = () => {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute right-0 mt-2 w-32 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800">
-            <RadioGroup value={theme} onChange={setTheme}>
+            <RadioGroup value={theme} onChange={handleSetTheme}>
               <div className="p-1">
                 <RadioGroup.Option value="light">
                   <Menu.Item>

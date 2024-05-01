@@ -60,6 +60,11 @@ const securityHeaders = [
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
+    transpilePackages: [
+      '@douyinfe/semi-ui',
+      '@douyinfe/semi-icons',
+      '@douyinfe/semi-illustrations',
+    ],
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {

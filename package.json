@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
+    "@douyinfe/semi-ui": "^2.57.0",
     "@headlessui/react": "1.7.19",
     "@next/bundle-analyzer": "14.2.1",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.12",
-    "@uiw/react-tree": "^4.22.3",
     "autoprefixer": "^10.4.13",
     "contentlayer2": "0.4.4",
     "esbuild": "0.20.2",

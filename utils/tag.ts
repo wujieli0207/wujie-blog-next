@@ -1,7 +1,11 @@
-import type { TreeData } from '@uiw/react-tree'
+import { TreeNodeData } from '@douyinfe/semi-ui/lib/es/tree'
 
-export function createTagTree(data: Record<string, number>): TreeData[] {
-  const treeData: TreeData[] = []
+export function removeTagBrackets(str: string) {
+  return str.replace(/\(.*\)/, '')
+}
+
+export function createTagTree(data: Record<string, number>): TreeNodeData[] {
+  const treeData: TreeNodeData[] = []
   const map = {}
 
   for (const path in data) {
@@ -13,6 +17,7 @@ export function createTagTree(data: Record<string, number>): TreeData[] {
       if (!map[key]) {
         const node = {
           label: item,
+          value: item,
           key: key,
           count: data[path],
         }
