@@ -4,10 +4,11 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { Blog } from 'contentlayer/generated'
+import { CoreContent } from 'pliny/utils/contentlayer'
 
 const MAX_DISPLAY = 5
 
-export default function Home({ posts }: { posts: Blog[] }) {
+export default function Home({ posts }: { posts: CoreContent<Blog>[] }) {
   return (
     <>
       <div className="">
