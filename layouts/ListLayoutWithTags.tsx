@@ -30,7 +30,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   const nextPage = currentPage + 1 <= totalPages
 
   return (
-    <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+    <div className="space-y-2 pb-2 pt-6 md:space-y-5">
       <nav className="flex justify-between">
         {!prevPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
@@ -83,9 +83,9 @@ export default function ListLayoutWithTags({
             {title}
           </h1>
         </div>
-        <div className="flex sm:space-x-12">
-          <div className="hidden h-full max-h-[calc(100vh-200px)] min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded-lg bg-gray-50 pt-5 dark:bg-gray-900/70 dark:shadow-gray-800/40 lg:flex">
-            <div className="w-full px-6 py-4">
+        <div className="flex sm:space-x-8">
+          <div className="hidden h-full max-h-[calc(100vh-200px)] w-[250px] max-w-[250px] flex-wrap overflow-auto rounded-lg bg-gray-50 pt-5 dark:bg-gray-900/70 dark:shadow-gray-800/40 lg:flex">
+            <div className="w-full px-6">
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
               ) : (
@@ -117,7 +117,7 @@ export default function ListLayoutWithTags({
                 const { path, date, title, summary, tags } = post
                 return (
                   <li key={path} className="rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
-                    <article className="space-2 flex flex-col p-2 xl:space-y-0">
+                    <article className="space-2 flex flex-col p-1 xl:space-y-0">
                       <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
@@ -126,10 +126,14 @@ export default function ListLayoutWithTags({
                             </Link>
                           </h2>
                           <div className="mt-4 flex justify-between">
-                            <span>{tags?.map((tag) => <Tag key={tag} text={tag} />)}</span>
+                            <span>
+                              {tags?.map((tag) => (
+                                <Tag key={tag} text={tag} className="mr-2 text-xs" />
+                              ))}
+                            </span>
                             <dl>
                               <dt className="sr-only">Published on</dt>
-                              <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                              <dd className="text-xs font-medium leading-6 text-gray-500 dark:text-gray-400">
                                 <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                               </dd>
                             </dl>

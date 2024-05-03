@@ -1,6 +1,6 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import Logo from '@/components/Logo'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -16,9 +16,7 @@ const Header = () => {
               <Logo />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
-              </div>
+              <div className="text-xl font-semibold sm:text-2xl">{siteMetadata.headerTitle}</div>
             ) : (
               siteMetadata.headerTitle
             )}
