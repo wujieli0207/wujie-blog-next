@@ -54,6 +54,23 @@ const computedFields: ComputedFields = {
     resolve: (doc) => doc._raw.sourceFilePath,
   },
   toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  summary: {
+    type: 'string',
+    resolve: (doc) => {
+      // Get the raw content of the document
+      let rawContent = doc.body.raw
+
+      // Remove markdown formatting characters and HTML tags if necessary
+      // This includes # for headers, > for blockquotes, - for lists, etc.
+      // You can add other markdown characters to the regex if needed
+      rawContent = rawContent.replace(/<\/?[^>]+(>|$)|[#>\-*+]/g, '')
+
+      // Collapse multiple spaces into a single space
+      rawContent = rawContent.replace(/\s\s+/g, ' ')
+
+      return `${rawContent.substring(0, 97)} ...` // Return the first 100 characters
+    },
+  },
 }
 
 /**
