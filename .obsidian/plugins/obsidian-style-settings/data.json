@@ -1,0 +1,11 @@
+{
+  "Components@@tab-autohide": false,
+  "Components@@status-bar-autohide": false,
+  "Components@@Ribbon-autohide": true,
+  "Components@@nav-header-autohide": true,
+  "Components@@tab-title-bar-autohide": true,
+  "Components@@CTA-BTN-enable": true,
+  "Components@@folder-font-bold": true,
+  "Components@@file-names-untrim": true,
+  "Components@@colorful-folder": true
+}

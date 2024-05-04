@@ -1,0 +1,30 @@
+.nav-folder-title,
+.nav-folder-title-content {
+  font-weight: 600 !important;
+  line-height: 1.8 !important;
+}
+
+/* bullet 到文字的距离 */
+.cm-formatting-list {
+  margin-right: 8px;
+}
+
+/* list 的行间距 */
+.HyperMD-list-line {
+  line-height: 2;
+}
+
+body {
+  /* inline-code 颜色 */
+  --code-normal: rgb(100, 134, 91);
+  --inline-code-normal: rgb(100, 134, 91);
+
+  /* 加粗颜色 */
+  --bold-color: #ca774b;
+
+  /* 引用 border 颜色 */
+  --blockquote-border-color: #5678c7;
+
+  /* 行间距 */
+  /* --line-height-normal: 2.3; */
+}
