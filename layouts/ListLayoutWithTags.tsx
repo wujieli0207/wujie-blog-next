@@ -12,6 +12,7 @@ import { createTagTree, removeTagBrackets } from 'utils/tag'
 import { Tree } from '@douyinfe/semi-ui'
 import { useMemo, useState } from 'react'
 import { Tag as SemiTag, SideSheet as SemiSideSheet, Button as SemiButton } from '@douyinfe/semi-ui'
+import { IconFilter } from '@douyinfe/semi-icons'
 
 interface PaginationProps {
   totalPages: number
@@ -21,6 +22,7 @@ interface PaginationProps {
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]
   title: string
+  filterTag?: string // 跳转页面携带的 tag 用于过滤
 }
 
 const POSTS_PER_PAGE = 5
@@ -66,13 +68,11 @@ function Pagination({ totalPages, currentPage, onPageChange }: PaginationProps) 
   )
 }
 
-export default function ListLayoutWithTags({ posts, title }: ListLayoutProps) {
+export default function ListLayoutWithTags({ posts, title, filterTag }: ListLayoutProps) {
   const tagTree = createTagTree(tagData)
 
-  const [selectedTag, setSelectedTag] = useState('')
+  const [selectedTag, setSelectedTag] = useState(filterTag ?? '')
   const [pageNumber, setPageNumber] = useState(1)
-  const [isCloseTagFilter, setIsShowTagFilter] = useState(false)
-
   const [tagSheetVisible, setTagSheetVisible] = useState(false)
   const toggleTagSheetVisible = () => {
     setTagSheetVisible(!tagSheetVisible)
@@ -111,7 +111,10 @@ export default function ListLayoutWithTags({ posts, title }: ListLayoutProps) {
               </SemiTag>
             )}
             <SemiButton theme="borderless" type="tertiary" onClick={toggleTagSheetVisible}>
-              <span className="text-gray-900">Tags</span>
+              <span className="flex items-center text-gray-900 dark:text-gray-100">
+                <IconFilter size="small" className="mr-1" />
+                Tags
+              </span>
             </SemiButton>
           </div>
         </div>

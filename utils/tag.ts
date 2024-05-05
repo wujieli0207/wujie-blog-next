@@ -1,7 +1,12 @@
 import { TreeNodeData } from '@douyinfe/semi-ui/lib/es/tree'
+import { slug } from 'github-slugger'
 
 export function removeTagBrackets(str: string) {
   return str.replace(/\(.*\)/, '')
+}
+
+export function formatTag(tag: string) {
+  return slug(tag.replace(/\//g, '_'))
 }
 
 export function createTagTree(data: Record<string, number>): TreeNodeData[] {

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { slug } from 'github-slugger'
+import { formatTag } from 'utils/tag'
 
 interface Props {
   text: string
@@ -9,7 +9,7 @@ interface Props {
 const Tag = ({ text, className }: Props) => {
   return (
     <Link
-      href={`/tags/${slug(text)}`}
+      href={`/blog/tag/${formatTag(text)}`}
       className={`mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 ${className}`}
     >
       {text.split(' ').join('-')}
