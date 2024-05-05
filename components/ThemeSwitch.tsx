@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { Menu, RadioGroup, Transition } from '@headlessui/react'
 import { usePreferDarkMode } from 'hooks/usePreferDarkMode'
@@ -61,11 +61,10 @@ const ThemeSwitch = () => {
   }
 
   const setSemiTheme = (value: string, isPreferDarkMode: boolean) => {
-    const body = document.body
     if (value === 'dark' || (value === 'system' && isPreferDarkMode)) {
-      body.setAttribute('theme-mode', 'dark')
+      document.body.setAttribute('theme-mode', 'dark')
     } else {
-      body.removeAttribute('theme-mode')
+      document.body.removeAttribute('theme-mode')
     }
   }
 

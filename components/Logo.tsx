@@ -29,8 +29,8 @@ export default function Logo() {
           gradientTransform="rotate(45)"
           style={{ transformOrigin: 'center center' }}
         >
-          <stop stop-color="#A8C0FF"></stop>
-          <stop offset="1" stop-color="#3F2B96"></stop>
+          <stop stopColor="#A8C0FF"></stop>
+          <stop offset="1" stopColor="#3F2B96"></stop>
         </linearGradient>
         <radialGradient
           id="r6"
@@ -40,8 +40,8 @@ export default function Logo() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(256) rotate(90) scale(512)"
         >
-          <stop stop-color="white"></stop>
-          <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+          <stop stopColor="white"></stop>
+          <stop offset="1" stopColor="white" stopOpacity="0"></stop>
         </radialGradient>
       </defs>
       <svg
@@ -54,7 +54,7 @@ export default function Logo() {
         height="352"
         x="80"
         y="80"
-        alignment-baseline="middle"
+        alignmentBaseline="middle"
         style={{ color: '#ffffff' }}
       >
         <path
