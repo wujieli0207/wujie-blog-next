@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
+    "@douyinfe/semi-icons": "^2.57.0",
     "@douyinfe/semi-ui": "^2.57.0",
     "@headlessui/react": "1.7.19",
     "@next/bundle-analyzer": "14.2.1",
