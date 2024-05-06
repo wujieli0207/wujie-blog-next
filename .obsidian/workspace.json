@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "data/blog/front/engineering/how-to-use-standard-version.mdx",
+                "file": "data/blog/weekly/vol14.mdx",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "data/blog/front/engineering/how-to-use-standard-version.mdx",
+                "file": "data/blog/weekly/vol14.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "data/blog/front/engineering/how-to-use-standard-version.mdx",
+                "file": "data/blog/weekly/vol14.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,17 +125,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "data/blog/front/engineering/how-to-use-standard-version.mdx"
+                "file": "data/blog/weekly/vol14.mdx"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,10 +146,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "16a2b798ef75ba93",
+  "active": "1ea2800de29abf78",
   "lastOpenFiles": [
-    "data/blog/front/engineering/git-collaborative-workflow.mdx",
-    "data/blog/front/engineering/clean-code-lint-standard.mdx",
-    "data/blog/front/engineering/redux/redux-principle3-middleware.mdx"
+    "public/static/images/jike-export.png",
+    "public/static/images/jike-export.wujieli.com_ (1).png",
+    "public/static/images/jike-export.wujieli.com_.png",
+    "public/static/favicons/favicon-32x32.png",
+    "public/static/favicons/favicon-16x16.png",
+    "public/static/favicons/android-chrome-96x96.png",
+    "public/static/favicons/mstile-150x150.png",
+    "data/blog/life/how-to-lose-a-lot-of-money.mdx",
+    "data/blog/life/How to lose a lot of money.mdx",
+    "data/blog/life/temp.mdx",
+    "pnpm-lock.yaml.2386274186",
+    "app/blog/tag/[...tag]/page.tsx",
+    "app/blog/tag/[...tag]",
+    "app/blog/tag",
+    "app/blog/page/[page]/page.tsx",
+    "app/blog/page/[page]",
+    "app/blog/page"
   ]
 }
