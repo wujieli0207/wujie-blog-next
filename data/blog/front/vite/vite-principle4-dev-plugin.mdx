@@ -16,7 +16,7 @@ draft: false
 
 ## 实现原理
 
-在 vite 启动 server 的过程中，会通过 `createPluginContainer` 方法创建插件容器，在之前的[文章](https://juejin.cn/post/7258201505336410169)提到过，插件容器主要有三个作用
+在 vite 启动 server 的过程中，会通过 `createPluginContainer` 方法创建插件容器，在之前的[文章](https://www.wujieli.com/blog/front/vite/vite-principle1-start-vite-project)提到过，插件容器主要有三个作用
 
 1. 管理的插件的生命周期
 2. 在插件之间传递上下文对象，上下文对象包含 vite 的内部状态和配置信息，这样插件通过上下文对象就能访问和修改 vite 内部状态

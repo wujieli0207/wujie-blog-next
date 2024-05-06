@@ -415,7 +415,7 @@ function removeRoute(matcherRef: RouteRecordName | RouteRecordMatcher) {
 
 ### parseQuery 和 stringifyQuery 属性
 
-parseQuery 属性和 originalStringifyQuery 属性如果没有自定义的话，会通过默认的方法进行处理，两个方法都是标准的 url 参数序列化和反序列化过程，很值得作为标准模板使用。两个方法的原理在我的另一篇文章 [vue 项目优雅的对 url 参数加密](https://juejin.cn/post/7158216149417590814#heading-1) 的实现原理部分有详细介绍，这里就不再重复复制了
+parseQuery 属性和 originalStringifyQuery 属性如果没有自定义的话，会通过默认的方法进行处理，两个方法都是标准的 url 参数序列化和反序列化过程，很值得作为标准模板使用。两个方法的原理在我的另一篇文章 [vue 项目优雅的对 url 参数加密](https://www.wujieli.com/blog/front/vue/vue-url-parameter-encryption) 的实现原理部分有详细介绍，这里就不再重复复制了
 
 ```ts
 import { parseQuery as originalParseQuery, stringifyQuery as originalStringifyQuery } from './query'

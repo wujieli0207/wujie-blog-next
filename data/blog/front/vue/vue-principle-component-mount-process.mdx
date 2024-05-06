@@ -327,7 +327,7 @@ const render: RootRenderFunction = (vnode, container, isSVG) => {
 2. 旧节点存在，且新旧节点类型不同，卸载旧节点
 3. PatchFlags.BAIL 时，会直接跳过该节点以及其后代节点的更新过程，以此优化性能
 4. 根据不同类型节点类型处理
-5. 定义 ref 模板引用（实现原理可以参考我的另一篇[文章](https://juejin.cn/post/7217295157706817594)）
+5. 定义 ref 模板引用（实现原理可以参考我的另一篇[文章](https://www.wujieli.com/blog/front/vue/vue-principle-template-ref)）
 
 ```ts
 const patch: PatchFn = (/* 相关参数 */) => {
