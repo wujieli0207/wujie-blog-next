@@ -94,11 +94,13 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
           <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
             <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
             <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
-              <Link href={discussUrl(path)} rel="nofollow">
+              <Link href={discussUrl(path)} title="Discuss on Twitter" rel="nofollow">
                 Discuss on Twitter
               </Link>
               {` • `}
-              <Link href={editUrl(filePath)}>View on GitHub</Link>
+              <Link href={editUrl(filePath)} title="View on GitHub">
+                View on GitHub
+              </Link>
             </div>
             {siteMetadata.comments && (
               <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300" id="comment">
@@ -117,7 +119,9 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         Previous
                       </h2>
                       <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                        <Link href={`/${prev.path}`}>{prev.title}</Link>
+                        <Link href={`/${prev.path}`} title={prev.title}>
+                          {prev.title}
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -127,7 +131,9 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         Next
                       </h2>
                       <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                        <Link href={`/${next.path}`}>{next.title}</Link>
+                        <Link href={`/${next.path}`} title={next.title}>
+                          {next.title}
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -139,6 +145,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 href={`/${basePath}`}
                 className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 aria-label="Back to the blog"
+                title="Back to the blog"
               >
                 &larr; Back to the blog
               </Link>

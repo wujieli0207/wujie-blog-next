@@ -37,6 +37,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
         {prevPage && (
           <Link
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
+            title="Previous"
             rel="prev"
           >
             Previous
@@ -51,7 +52,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {nextPage && (
-          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+          <Link href={`/${basePath}/page/${currentPage + 1}`} title="Next" rel="next">
             Next
           </Link>
         )}
@@ -126,7 +127,11 @@ export default function ListLayout({
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                        <Link
+                          href={`/${path}`}
+                          title={title}
+                          className="text-gray-900 dark:text-gray-100"
+                        >
                           {title}
                         </Link>
                       </h3>

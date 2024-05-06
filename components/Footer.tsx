@@ -21,7 +21,9 @@ export default function Footer() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+          <Link href="/" title={siteMetadata.title}>
+            {siteMetadata.title}
+          </Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">岁月神偷，不忘初心</div>
       </div>

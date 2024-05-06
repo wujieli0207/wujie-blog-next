@@ -40,6 +40,7 @@ const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
       target="_blank"
       rel="noopener noreferrer"
       href={href}
+      title={kind}
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
