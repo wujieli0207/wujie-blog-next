@@ -8,6 +8,10 @@ export default function Footer() {
       name: 'Hand Drawn AI',
       href: 'https://handdrawn.ai/',
     },
+    {
+      name: '独立开发沉思录周刊',
+      href: 'https://hackthinking.com',
+    },
   ]
 
   return (
